@@ -19,7 +19,9 @@ Imports:
     magrittr,
     R2HTML
 Suggests:
-    testthat
+    testthat,
+    rmarkdown,
+    knitr
 License:
     GPL-2
 URL:
