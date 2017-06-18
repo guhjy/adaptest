@@ -58,8 +58,9 @@ gc()
 library(data.adapt.multi.test)
 out_result <- data_adapt_multi_test(Y = Y, A = A.sample.vec, n.top = p.true + 5,
                                     n.fold = 10, parallel = FALSE) # BH on all Y
-
-print.data_adapt(out_result)
-plot.data_adapt(out_result)
+print(out_result)
+plot(out_result)
+# print.data_adapt(out_result)
+# plot.data_adapt(out_result)
 
 save(out_result, file = 'out_result_1e3_sig_1.Rdata')
