@@ -97,7 +97,7 @@ data_adapt_multi_test <- function(Y,
     # data-adaptive target parameter
     # ==========================================================================
     data.adaptive.index <- data_adapt_rank(Y.param, A.param, W.param, absolute,
-    																			 negative)
+                                           negative)
     return(data.adaptive.index)
   }
 
@@ -115,9 +115,9 @@ data_adapt_multi_test <- function(Y,
       rank.all.fold[it0,] <- data.adaptive.index
     }
   }
-	if (parallel::detectCores() > 1) { ##checking colnames error
-		data.adaptive.index <- t(data.adaptive.index)
-	}
+  if (parallel::detectCores() > 1) { ##checking colnames error
+    data.adaptive.index <- t(data.adaptive.index)
+  }
   # ============================================================================
   # compute average rank across all folds
   # ============================================================================
@@ -150,7 +150,7 @@ data_adapt_multi_test <- function(Y,
     index.here <- top.index[it2]
     print(paste('estimating:', index.here))
     tmle.estimation <- tmle(Y[, index.here], A = A, W = W,
-    												Q.SL.library = SL.lib, g.SL.library = SL.lib)
+                            Q.SL.library = SL.lib, g.SL.library = SL.lib)
     tmle.result.here <- tmle.estimation$estimates$ATE$psi
     tmle.p.val.here <- tmle.estimation$estimates$ATE$pvalue
 
