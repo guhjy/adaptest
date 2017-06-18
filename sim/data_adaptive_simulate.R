@@ -1,5 +1,6 @@
 set.seed(4321)
-n.sim <- 1e2 # sample size
+# n.sim <- 1e2 # sample size
+n.sim <- 1e3 # sample size
 # n.sim <- 1 # sample size
 p.all <- 1e3 # No. of dimensions of Y (signal + non-signal)
 # p.all <- 1e6 # No. of dimensions of Y (signal + non-signal)
