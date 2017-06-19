@@ -126,7 +126,7 @@ data_adapt_multi_test <- function(Y,
   # CV
   # ============================================================================
   # library(gsubfn)
-  source("https://raw.githubusercontent.com/ggrothendieck/gsubfn/master/R/list.R")
+  # source("https://raw.githubusercontent.com/ggrothendieck/gsubfn/master/R/list.R")
   if (parallel) {
     # doParallel::registerDoParallel(parallel::detectCores())
     # rank.all.fold <- foreach(it2 = 1:n.fold, .combine = cbind) %dopar% {
