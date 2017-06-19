@@ -102,6 +102,7 @@ data_adapt_multi_test <- function(Y,
                                            negative)
 
     index.grid <- head(data.adaptive.index, n.top)
+    # index.grid <- 1:15
     SL.lib <- c("SL.glm", "SL.step", "SL.glm.interaction", 'SL.gam', 'SL.earth')
     psi_list <- list()
 		EIC_list <- list()
