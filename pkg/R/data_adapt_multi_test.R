@@ -200,13 +200,13 @@ data_adapt_multi_test <- function(Y,
   p.final <- p.adjust(p.init, method = 'BH')
 
   still.sig <- p.final <= 0.05
-  sig.p.FDR <- top.index[still.sig]
-
+  # sig.p.FDR <- top.index[still.sig]
+  sig.p.FDR <- which(still.sig)
   # ============================================================================
   # export covariate name for easier interpretation
   # ============================================================================
-  top.col.name <- names(data_adapt$Y)[top.index]
-
+  # top.col.name <- names(data_adapt$Y)[top.index]
+  top.col.name <- adaptY_composition[which(still.sig)]
   # ============================================================================
   # add all newly computed statistical objects to the original data_adapt object
   # ============================================================================
