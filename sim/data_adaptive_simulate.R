@@ -58,7 +58,7 @@ gc()
 # ==============================================================================
 library(data.adapt.multi.test)
 out_result <- data_adapt_multi_test(Y = Y, A = A.sample.vec, n.top = p.true + 5,
-                                    n.fold = 10, parallel = FALSE) # BH on all Y
+                                    n.fold = 3, parallel = FALSE) # BH on all Y
 print(out_result)
 plot(out_result)
 # print.data_adapt(out_result)
